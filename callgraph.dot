@@ -1,0 +1,9 @@
+digraph CallGraph {
+  node [shape=box];
+  "main" -> "save_result";
+  "main" -> "process_data";
+  "process_data" -> "validate";
+  "process_data" -> "load_data";
+  "process_data" -> "clean_data";
+  "save_result" -> "write_to_file";
+}
