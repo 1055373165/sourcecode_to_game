@@ -1,6 +1,6 @@
 import React from 'react'
 import { cn, getDifficultyColor } from '@utils/index'
-import { Difficulty, AchievementCategory } from '@types/index'
+import { Difficulty, AchievementCategory } from '@apptypes/index'
 
 export interface BadgeProps {
     children: React.ReactNode

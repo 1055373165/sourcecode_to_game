@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from '@components/atoms/Button'
 import { Badge } from '@components/atoms/Badge'
 import { ProgressBar } from '@components/atoms/ProgressBar'
-import { Difficulty } from '@types/index'
+import { Difficulty } from '@apptypes/index'
 
 // Temporary demo page to showcase atomic components
 export const ComponentShowcase: React.FC = () => {

@@ -1,0 +1,98 @@
+INFO:     Started server process [33179]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-02-05 19:48:54,391 - app.middleware - INFO - Request: GET /health
+2026-02-05 19:48:54,393 - app.middleware - INFO - Response: GET /health - Status 200 - 0.003s
+INFO:     127.0.0.1:59677 - "GET /health HTTP/1.1" 200 OK
+2026-02-05 19:50:58,122 - app.middleware - INFO - Request: GET /health
+2026-02-05 19:50:58,127 - app.middleware - INFO - Response: GET /health - Status 200 - 0.005s
+INFO:     127.0.0.1:61309 - "GET /health HTTP/1.1" 200 OK
+2026-02-05 19:51:12,092 - app.middleware - INFO - Request: GET /health
+2026-02-05 19:51:12,096 - app.middleware - INFO - Response: GET /health - Status 200 - 0.005s
+INFO:     127.0.0.1:61442 - "GET /health HTTP/1.1" 200 OK
+2026-02-05 19:51:15,167 - app.middleware - INFO - Request: GET /health
+2026-02-05 19:51:15,168 - app.middleware - INFO - Response: GET /health - Status 200 - 0.001s
+INFO:     127.0.0.1:61474 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61715 - "OPTIONS /auth/register HTTP/1.1" 200 OK
+2026-02-05 19:51:33,972 - app.middleware - INFO - Request: POST /auth/register
+2026-02-05 19:51:34,236 - app.middleware - INFO - Response: POST /auth/register - Status 201 - 0.264s
+INFO:     127.0.0.1:61715 - "POST /auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:61715 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+2026-02-05 19:51:34,242 - app.middleware - INFO - Request: POST /auth/login
+2026-02-05 19:51:34,438 - app.middleware - INFO - Response: POST /auth/login - Status 200 - 0.196s
+INFO:     127.0.0.1:61715 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61715 - "OPTIONS /users/me/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61728 - "OPTIONS /users/me/progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61729 - "OPTIONS /users/me/achievements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61730 - "OPTIONS /projects HTTP/1.1" 200 OK
+2026-02-05 19:51:34,492 - app.middleware - INFO - Request: GET /users/me/stats
+2026-02-05 19:51:34,495 - app.middleware - INFO - Request: GET /users/me/progress
+2026-02-05 19:51:34,496 - app.middleware - INFO - Request: GET /users/me/achievements
+2026-02-05 19:51:34,496 - app.middleware - INFO - Request: GET /projects
+2026-02-05 19:51:34,512 - app.middleware - INFO - Response: GET /users/me/stats - Status 200 - 0.019s
+INFO:     127.0.0.1:61730 - "GET /users/me/stats HTTP/1.1" 200 OK
+2026-02-05 19:51:34,517 - app.middleware - INFO - Response: GET /users/me/progress - Status 200 - 0.022s
+INFO:     127.0.0.1:61729 - "GET /users/me/progress HTTP/1.1" 200 OK
+2026-02-05 19:51:34,518 - app.middleware - INFO - Response: GET /users/me/achievements - Status 200 - 0.022s
+INFO:     127.0.0.1:61728 - "GET /users/me/achievements HTTP/1.1" 200 OK
+2026-02-05 19:51:34,519 - app.middleware - INFO - Response: GET /projects - Status 200 - 0.022s
+INFO:     127.0.0.1:61715 - "GET /projects HTTP/1.1" 200 OK
+2026-02-05 19:51:43,105 - app.middleware - INFO - Request: GET /projects
+2026-02-05 19:51:43,115 - app.middleware - INFO - Response: GET /projects - Status 200 - 0.010s
+INFO:     127.0.0.1:61825 - "GET /projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62070 - "OPTIONS /projects?language=go HTTP/1.1" 200 OK
+2026-02-05 19:52:09,233 - app.middleware - INFO - Request: GET /projects
+2026-02-05 19:52:09,245 - app.middleware - INFO - Response: GET /projects - Status 200 - 0.012s
+INFO:     127.0.0.1:62070 - "GET /projects?language=go HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62976 - "OPTIONS /users/me/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62978 - "OPTIONS /users/me/progress HTTP/1.1" 200 OK
+2026-02-05 19:53:33,838 - app.middleware - INFO - Request: GET /users/me/progress
+2026-02-05 19:53:33,841 - app.middleware - INFO - Request: GET /users/me/stats
+2026-02-05 19:53:33,874 - app.middleware - INFO - Response: GET /users/me/progress - Status 200 - 0.036s
+INFO:     127.0.0.1:62978 - "GET /users/me/progress HTTP/1.1" 200 OK
+2026-02-05 19:53:33,876 - app.middleware - INFO - Response: GET /users/me/stats - Status 200 - 0.035s
+INFO:     127.0.0.1:62976 - "GET /users/me/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63157 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63158 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+2026-02-05 19:53:48,947 - app.middleware - INFO - Request: GET /auth/me
+2026-02-05 19:53:48,954 - app.middleware - INFO - Response: GET /auth/me - Status 200 - 0.007s
+INFO:     127.0.0.1:63158 - "GET /auth/me HTTP/1.1" 200 OK
+2026-02-05 19:53:48,955 - app.middleware - INFO - Request: GET /auth/me
+2026-02-05 19:53:48,957 - app.middleware - INFO - Response: GET /auth/me - Status 200 - 0.002s
+INFO:     127.0.0.1:63157 - "GET /auth/me HTTP/1.1" 200 OK
+2026-02-05 19:53:48,962 - app.middleware - INFO - Request: GET /users/me/stats
+2026-02-05 19:53:48,963 - app.middleware - INFO - Request: GET /users/me/progress
+2026-02-05 19:53:48,964 - app.middleware - INFO - Request: GET /users/me/achievements
+2026-02-05 19:53:48,964 - app.middleware - INFO - Request: GET /projects
+2026-02-05 19:53:48,971 - app.middleware - INFO - Response: GET /users/me/stats - Status 200 - 0.009s
+INFO:     127.0.0.1:63157 - "GET /users/me/stats HTTP/1.1" 200 OK
+2026-02-05 19:53:48,972 - app.middleware - INFO - Response: GET /users/me/progress - Status 200 - 0.009s
+INFO:     127.0.0.1:63158 - "GET /users/me/progress HTTP/1.1" 200 OK
+2026-02-05 19:53:48,976 - app.middleware - INFO - Response: GET /users/me/achievements - Status 200 - 0.012s
+INFO:     127.0.0.1:63161 - "GET /users/me/achievements HTTP/1.1" 200 OK
+2026-02-05 19:53:48,976 - app.middleware - INFO - Response: GET /projects - Status 200 - 0.013s
+INFO:     127.0.0.1:63162 - "GET /projects HTTP/1.1" 200 OK
+2026-02-05 19:55:20,454 - app.middleware - INFO - Request: GET /users/me/stats
+2026-02-05 19:55:20,454 - app.middleware - INFO - Request: GET /users/me/progress
+2026-02-05 19:55:20,465 - app.middleware - INFO - Response: GET /users/me/stats - Status 200 - 0.011s
+INFO:     127.0.0.1:64139 - "GET /users/me/stats HTTP/1.1" 200 OK
+2026-02-05 19:55:20,465 - app.middleware - INFO - Response: GET /users/me/progress - Status 200 - 0.011s
+INFO:     127.0.0.1:64140 - "GET /users/me/progress HTTP/1.1" 200 OK
+2026-02-05 19:55:26,684 - app.middleware - INFO - Request: GET /projects
+2026-02-05 19:55:26,695 - app.middleware - INFO - Response: GET /projects - Status 200 - 0.011s
+INFO:     127.0.0.1:64271 - "GET /projects HTTP/1.1" 200 OK
+2026-02-05 20:02:53,039 - app.middleware - INFO - Request: GET /users/me/stats
+2026-02-05 20:02:53,044 - app.middleware - INFO - Request: GET /users/me/progress
+INFO:     127.0.0.1:54703 - "OPTIONS /users/me/achievements HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54704 - "OPTIONS /projects HTTP/1.1" 200 OK
+2026-02-05 20:02:53,081 - app.middleware - INFO - Request: GET /users/me/achievements
+2026-02-05 20:02:53,091 - app.middleware - INFO - Request: GET /projects
+2026-02-05 20:02:53,131 - app.middleware - INFO - Response: GET /users/me/stats - Status 200 - 0.094s
+INFO:     127.0.0.1:54700 - "GET /users/me/stats HTTP/1.1" 200 OK
+2026-02-05 20:02:53,133 - app.middleware - INFO - Response: GET /users/me/progress - Status 200 - 0.089s
+INFO:     127.0.0.1:54702 - "GET /users/me/progress HTTP/1.1" 200 OK
+2026-02-05 20:02:53,137 - app.middleware - INFO - Response: GET /users/me/achievements - Status 200 - 0.056s
+INFO:     127.0.0.1:54703 - "GET /users/me/achievements HTTP/1.1" 200 OK
+2026-02-05 20:02:53,137 - app.middleware - INFO - Response: GET /projects - Status 200 - 0.046s
+INFO:     127.0.0.1:54704 - "GET /projects HTTP/1.1" 200 OK

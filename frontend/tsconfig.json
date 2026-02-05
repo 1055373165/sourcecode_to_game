@@ -36,7 +36,7 @@
             "@services/*": [
                 "./src/services/*"
             ],
-            "@types/*": [
+            "@apptypes/*": [
                 "./src/types/*"
             ],
             "@utils/*": [
