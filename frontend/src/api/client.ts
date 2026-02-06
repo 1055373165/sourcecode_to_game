@@ -231,6 +231,28 @@ class ApiClient {
         return this.request(`/projects/${id}`);
     }
 
+    async getProjectLevels(projectId: string): Promise<{
+        project_id: string;
+        project_name: string;
+        total_levels: number;
+        levels: Array<{
+            id: string;
+            name: string;
+            description: string | null;
+            difficulty: number;
+            entry_function: string | null;
+            code_snippet: string | null;
+            xp_reward: number;
+            estimated_time: number;
+            challenges_count: number;
+            is_completed: boolean;
+            score: number;
+        }>;
+    }> {
+        return this.request(`/projects/${projectId}/levels`);
+    }
+
+
     // Level endpoints
     async getLevel(id: string): Promise<LevelDetail> {
         return this.request(`/levels/${id}`);

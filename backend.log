@@ -1,2 +1,139 @@
 INFO:     Will watch for changes in these directories: ['/Users/smy/projects/gravity/study_with_challenge_game/backend']
-ERROR:    [Errno 48] Address already in use
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [81807] using StatReload
+INFO:     Started server process [81810]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+2026-02-06 17:06:05,925 - app.middleware - INFO - Request: GET /health
+2026-02-06 17:06:05,930 - app.middleware - INFO - Response: GET /health - Status 200 - 0.005s
+INFO:     127.0.0.1:65174 - "GET /health HTTP/1.1" 200 OK
+2026-02-06 17:06:09,089 - app.middleware - INFO - Request: GET /health
+2026-02-06 17:06:09,090 - app.middleware - INFO - Response: GET /health - Status 200 - 0.001s
+INFO:     127.0.0.1:65206 - "GET /health HTTP/1.1" 200 OK
+2026-02-06 17:06:35,456 - app.middleware - INFO - Request: POST /auth/login
+2026-02-06 17:06:35,682 - app.middleware - INFO - Response: POST /auth/login - Status 200 - 0.227s
+INFO:     127.0.0.1:65473 - "POST /auth/login HTTP/1.1" 200 OK
+2026-02-06 17:06:35,696 - app.middleware - INFO - Request: POST /projects
+2026-02-06 17:06:35,707 - app.middleware - INFO - Response: POST /projects - Status 201 - 0.011s
+INFO:     127.0.0.1:65475 - "POST /projects?github_url=https://github.com/postmanlabs/httpbin&name=HTTPBin%20API&language=python HTTP/1.1" 201 Created
+2026-02-06 17:06:35,708 - app.tasks.analysis_tasks - INFO - Starting background analysis for project 85afdb69-9501-4b2a-bb71-536d70d0d109
+2026-02-06 17:06:35,716 - app.services.analysis_pipeline - INFO - Progress [5%]: Starting analysis...
+2026-02-06 17:06:35,717 - app.services.analysis_pipeline - INFO - Stage 1: Cloning repository for project HTTPBin API
+2026-02-06 17:06:35,717 - app.services.analysis_pipeline - INFO - Progress [10%]: Cloning repository...
+2026-02-06 17:06:35,717 - app.services.github_service - INFO - Cloning repository: postmanlabs/httpbin to /var/folders/xr/9s_mn3sd1hsg4m7p8xgl9dc00000gn/T/study_game_repos/postmanlabs_httpbin_20260206_170635
+2026-02-06 17:06:37,224 - app.services.github_service - INFO - Successfully cloned postmanlabs/httpbin: 8 python files, 379.6KB
+2026-02-06 17:06:37,224 - app.services.analysis_pipeline - INFO - Progress [25%]: Repository cloned (8 files)
+2026-02-06 17:06:37,224 - app.services.analysis_pipeline - INFO - Stage 2: Analyzing python source code
+2026-02-06 17:06:37,224 - app.services.analysis_pipeline - INFO - Progress [30%]: Analyzing source code...
+2026-02-06 17:06:39,135 - app.services.analysis_pipeline - INFO - Progress [50%]: Found 247 functions
+2026-02-06 17:06:39,135 - app.services.analysis_pipeline - INFO - Stage 3: Generating learning levels
+2026-02-06 17:06:39,135 - app.services.analysis_pipeline - INFO - Progress [55%]: Generating learning levels...
+2026-02-06 17:06:39,137 - app.services.analysis_pipeline - INFO - Progress [75%]: Generated 10 levels
+2026-02-06 17:06:39,137 - app.services.analysis_pipeline - INFO - Stage 4: Saving results to database
+2026-02-06 17:06:39,137 - app.services.analysis_pipeline - INFO - Progress [80%]: Saving to database...
+2026-02-06 17:06:39,146 - app.services.analysis_pipeline - INFO - Progress [100%]: Analysis complete!
+2026-02-06 17:06:39,146 - app.services.analysis_pipeline - INFO - Successfully analyzed project HTTPBin API: 10 levels
+2026-02-06 17:06:39,152 - app.services.github_service - INFO - Cleaned up repository: /var/folders/xr/9s_mn3sd1hsg4m7p8xgl9dc00000gn/T/study_game_repos/postmanlabs_httpbin_20260206_170635
+2026-02-06 17:06:39,153 - app.tasks.analysis_tasks - INFO - Background analysis completed for project 85afdb69-9501-4b2a-bb71-536d70d0d109
+2026-02-06 17:07:12,250 - app.middleware - INFO - Request: POST /auth/login
+2026-02-06 17:07:12,469 - app.middleware - INFO - Response: POST /auth/login - Status 200 - 0.220s
+INFO:     127.0.0.1:49483 - "POST /auth/login HTTP/1.1" 200 OK
+2026-02-06 17:07:12,490 - app.middleware - INFO - Request: GET /projects/85afdb69-9501-4b2a-bb71-536d70d0d109/progress
+2026-02-06 17:07:12,493 - app.middleware - INFO - Response: GET /projects/85afdb69-9501-4b2a-bb71-536d70d0d109/progress - Status 200 - 0.003s
+INFO:     127.0.0.1:49486 - "GET /projects/85afdb69-9501-4b2a-bb71-536d70d0d109/progress HTTP/1.1" 200 OK
+2026-02-06 17:07:12,547 - app.middleware - INFO - Request: GET /projects/85afdb69-9501-4b2a-bb71-536d70d0d109/levels
+2026-02-06 17:07:12,558 - app.middleware - INFO - Response: GET /projects/85afdb69-9501-4b2a-bb71-536d70d0d109/levels - Status 200 - 0.011s
+INFO:     127.0.0.1:49488 - "GET /projects/85afdb69-9501-4b2a-bb71-536d70d0d109/levels HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51067 - "OPTIONS /users/me/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51071 - "OPTIONS /users/me/progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51072 - "OPTIONS /levels/095b7f03-b889-40d2-9777-6c610f166e6b HTTP/1.1" 200 OK
+2026-02-06 17:09:48,663 - app.middleware - INFO - Request: GET /users/me/stats
+2026-02-06 17:09:48,679 - app.middleware - INFO - Request: GET /users/me/progress
+2026-02-06 17:09:48,680 - app.middleware - INFO - Request: GET /levels/095b7f03-b889-40d2-9777-6c610f166e6b
+2026-02-06 17:09:48,691 - app.middleware - INFO - Response: GET /users/me/stats - Status 401 - 0.028s
+INFO:     127.0.0.1:51071 - "GET /users/me/stats HTTP/1.1" 401 Unauthorized
+2026-02-06 17:09:48,692 - app.middleware - INFO - Response: GET /users/me/progress - Status 401 - 0.013s
+INFO:     127.0.0.1:51072 - "GET /users/me/progress HTTP/1.1" 401 Unauthorized
+2026-02-06 17:09:48,693 - app.middleware - INFO - Response: GET /levels/095b7f03-b889-40d2-9777-6c610f166e6b - Status 401 - 0.013s
+INFO:     127.0.0.1:51067 - "GET /levels/095b7f03-b889-40d2-9777-6c610f166e6b HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:51067 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51072 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+2026-02-06 17:09:49,542 - app.middleware - INFO - Request: GET /auth/me
+2026-02-06 17:09:49,542 - app.middleware - INFO - Request: GET /auth/me
+2026-02-06 17:09:49,564 - app.middleware - INFO - Response: GET /auth/me - Status 200 - 0.022s
+INFO:     127.0.0.1:51072 - "GET /auth/me HTTP/1.1" 200 OK
+2026-02-06 17:09:49,564 - app.middleware - INFO - Response: GET /auth/me - Status 200 - 0.022s
+INFO:     127.0.0.1:51067 - "GET /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51067 - "OPTIONS /users/me/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51072 - "OPTIONS /users/me/progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51071 - "OPTIONS /levels/095b7f03-b889-40d2-9777-6c610f166e6b HTTP/1.1" 200 OK
+2026-02-06 17:09:49,580 - app.middleware - INFO - Request: GET /users/me/stats
+2026-02-06 17:09:49,581 - app.middleware - INFO - Request: GET /users/me/progress
+2026-02-06 17:09:49,581 - app.middleware - INFO - Request: GET /levels/095b7f03-b889-40d2-9777-6c610f166e6b
+2026-02-06 17:09:49,607 - app.middleware - INFO - Response: GET /users/me/stats - Status 200 - 0.026s
+INFO:     127.0.0.1:51067 - "GET /users/me/stats HTTP/1.1" 200 OK
+2026-02-06 17:09:49,612 - app.middleware - INFO - Response: GET /users/me/progress - Status 200 - 0.031s
+INFO:     127.0.0.1:51071 - "GET /users/me/progress HTTP/1.1" 200 OK
+2026-02-06 17:09:49,613 - app.middleware - INFO - Response: GET /levels/095b7f03-b889-40d2-9777-6c610f166e6b - Status 200 - 0.031s
+INFO:     127.0.0.1:51072 - "GET /levels/095b7f03-b889-40d2-9777-6c610f166e6b HTTP/1.1" 200 OK
+2026-02-06 17:31:48,208 - app.middleware - INFO - Request: POST /auth/login
+2026-02-06 17:31:48,425 - app.middleware - INFO - Response: POST /auth/login - Status 200 - 0.216s
+INFO:     127.0.0.1:65333 - "POST /auth/login HTTP/1.1" 200 OK
+2026-02-06 17:31:48,438 - app.middleware - INFO - Request: GET /projects/85afdb69-9501-4b2a-bb71-536d70d0d109/levels
+2026-02-06 17:31:48,447 - app.middleware - INFO - Response: GET /projects/85afdb69-9501-4b2a-bb71-536d70d0d109/levels - Status 200 - 0.009s
+INFO:     127.0.0.1:65335 - "GET /projects/85afdb69-9501-4b2a-bb71-536d70d0d109/levels HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49480 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49482 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+2026-02-06 17:32:36,584 - app.middleware - INFO - Request: GET /auth/me
+INFO:     127.0.0.1:49484 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49486 - "OPTIONS /auth/me HTTP/1.1" 200 OK
+2026-02-06 17:32:36,590 - app.middleware - INFO - Response: GET /auth/me - Status 401 - 0.006s
+INFO:     127.0.0.1:49480 - "GET /auth/me HTTP/1.1" 401 Unauthorized
+2026-02-06 17:32:36,592 - app.middleware - INFO - Request: GET /auth/me
+2026-02-06 17:32:36,596 - app.middleware - INFO - Response: GET /auth/me - Status 401 - 0.003s
+INFO:     127.0.0.1:49486 - "GET /auth/me HTTP/1.1" 401 Unauthorized
+2026-02-06 17:32:36,598 - app.middleware - INFO - Request: GET /auth/me
+2026-02-06 17:32:36,599 - app.middleware - INFO - Response: GET /auth/me - Status 401 - 0.001s
+INFO:     127.0.0.1:49480 - "GET /auth/me HTTP/1.1" 401 Unauthorized
+2026-02-06 17:32:36,603 - app.middleware - INFO - Request: GET /auth/me
+2026-02-06 17:32:36,607 - app.middleware - INFO - Response: GET /auth/me - Status 401 - 0.004s
+INFO:     127.0.0.1:49486 - "GET /auth/me HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:49523 - "OPTIONS /auth/login HTTP/1.1" 200 OK
+2026-02-06 17:32:39,918 - app.middleware - INFO - Request: POST /auth/login
+2026-02-06 17:32:40,148 - app.middleware - INFO - Response: POST /auth/login - Status 200 - 0.230s
+INFO:     127.0.0.1:49523 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49523 - "OPTIONS /users/me/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49523 - "OPTIONS /users/me/progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49537 - "OPTIONS /users/me/achievements HTTP/1.1" 200 OK
+2026-02-06 17:32:40,184 - app.middleware - INFO - Request: GET /users/me/progress
+INFO:     127.0.0.1:49540 - "OPTIONS /projects HTTP/1.1" 200 OK
+2026-02-06 17:32:40,185 - app.middleware - INFO - Request: GET /users/me/stats
+2026-02-06 17:32:40,185 - app.middleware - INFO - Request: GET /users/me/achievements
+2026-02-06 17:32:40,187 - app.middleware - INFO - Request: GET /projects
+2026-02-06 17:32:40,203 - app.middleware - INFO - Response: GET /users/me/progress - Status 200 - 0.019s
+INFO:     127.0.0.1:49523 - "GET /users/me/progress HTTP/1.1" 200 OK
+2026-02-06 17:32:40,204 - app.middleware - INFO - Response: GET /users/me/stats - Status 200 - 0.019s
+INFO:     127.0.0.1:49541 - "GET /users/me/stats HTTP/1.1" 200 OK
+2026-02-06 17:32:40,220 - app.middleware - INFO - Response: GET /users/me/achievements - Status 200 - 0.035s
+INFO:     127.0.0.1:49537 - "GET /users/me/achievements HTTP/1.1" 200 OK
+2026-02-06 17:32:40,221 - app.middleware - INFO - Response: GET /projects - Status 200 - 0.035s
+INFO:     127.0.0.1:49540 - "GET /projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49570 - "OPTIONS /projects/c925d559-81b0-4330-a7c3-88bad6f866c0/levels HTTP/1.1" 200 OK
+2026-02-06 17:32:42,527 - app.middleware - INFO - Request: GET /projects/c925d559-81b0-4330-a7c3-88bad6f866c0/levels
+2026-02-06 17:32:42,535 - app.middleware - INFO - Response: GET /projects/c925d559-81b0-4330-a7c3-88bad6f866c0/levels - Status 200 - 0.008s
+INFO:     127.0.0.1:49570 - "GET /projects/c925d559-81b0-4330-a7c3-88bad6f866c0/levels HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49570 - "OPTIONS /levels/498d179a-85df-45be-b72e-0c9a8d6d1fa6 HTTP/1.1" 200 OK
+2026-02-06 17:32:43,436 - app.middleware - INFO - Request: GET /levels/498d179a-85df-45be-b72e-0c9a8d6d1fa6
+2026-02-06 17:32:43,444 - app.middleware - INFO - Response: GET /levels/498d179a-85df-45be-b72e-0c9a8d6d1fa6 - Status 200 - 0.009s
+INFO:     127.0.0.1:49570 - "GET /levels/498d179a-85df-45be-b72e-0c9a8d6d1fa6 HTTP/1.1" 200 OK
+2026-02-06 17:32:49,873 - app.middleware - INFO - Request: GET /projects
+2026-02-06 17:32:49,884 - app.middleware - INFO - Response: GET /projects - Status 200 - 0.011s
+INFO:     127.0.0.1:49652 - "GET /projects HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49652 - "OPTIONS /projects/85afdb69-9501-4b2a-bb71-536d70d0d109/levels HTTP/1.1" 200 OK
+2026-02-06 17:32:50,519 - app.middleware - INFO - Request: GET /projects/85afdb69-9501-4b2a-bb71-536d70d0d109/levels
+2026-02-06 17:32:50,531 - app.middleware - INFO - Response: GET /projects/85afdb69-9501-4b2a-bb71-536d70d0d109/levels - Status 200 - 0.011s
+INFO:     127.0.0.1:49652 - "GET /projects/85afdb69-9501-4b2a-bb71-536d70d0d109/levels HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49652 - "OPTIONS /levels/17dd8ea2-6fa8-4aad-aa33-b6a9934dd0cb HTTP/1.1" 200 OK
+2026-02-06 17:32:51,041 - app.middleware - INFO - Request: GET /levels/17dd8ea2-6fa8-4aad-aa33-b6a9934dd0cb
+2026-02-06 17:32:51,094 - app.middleware - INFO - Response: GET /levels/17dd8ea2-6fa8-4aad-aa33-b6a9934dd0cb - Status 200 - 0.053s
+INFO:     127.0.0.1:49652 - "GET /levels/17dd8ea2-6fa8-4aad-aa33-b6a9934dd0cb HTTP/1.1" 200 OK

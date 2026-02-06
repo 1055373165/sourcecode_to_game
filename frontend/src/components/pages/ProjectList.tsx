@@ -30,9 +30,20 @@ export function ProjectList() {
     return (
         <div className="p-6 space-y-6">
             {/* Header */}
-            <div>
-                <h1 className="text-3xl font-bold text-white">Projects</h1>
-                <p className="text-slate-400 mt-1">Explore real-world codebases and learn by doing</p>
+            <div className="flex items-center justify-between">
+                <div>
+                    <h1 className="text-3xl font-bold text-white">Projects</h1>
+                    <p className="text-slate-400 mt-1">Explore real-world codebases and learn by doing</p>
+                </div>
+                <Link
+                    to="/projects/create"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium rounded-xl transition-all duration-200 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 5v14M5 12h14" />
+                    </svg>
+                    Add Project
+                </Link>
             </div>
 
             {/* Filters */}

@@ -492,9 +492,44 @@ class LevelGenerator:
         return f"Learn how {start_name} works and trace its execution to {end_name}"
     
     def _extract_code_snippet(self, chain: List[str]) -> str:
-        """Extract relevant code snippet"""
-        # TODO: Actually read and extract code from files
-        return "# Code snippet will be extracted from source files"
+        """Extract relevant code snippet from the entry function"""
+        if not chain:
+            return "# No code available"
+        
+        # Get the entry point node (first in chain)
+        entry_id = chain[0]
+        if entry_id not in self.call_graph.nodes:
+            return "# Entry function not found"
+        
+        node = self.call_graph.nodes[entry_id]
+        
+        try:
+            # Read the source file
+            file_path = Path(node.file_path)
+            if not file_path.exists():
+                return f"# Source file not found: {file_path.name}"
+            
+            with open(file_path, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+            
+            # Extract the function code (with some context)
+            start_line = max(0, node.line_start - 1)  # 0-indexed
+            end_line = min(len(lines), node.line_end)
+            
+            # Get the code snippet
+            code_lines = lines[start_line:end_line]
+            code_snippet = ''.join(code_lines)
+            
+            # Limit length to avoid huge snippets
+            max_chars = 2000
+            if len(code_snippet) > max_chars:
+                code_snippet = code_snippet[:max_chars] + "\n# ... (truncated)"
+            
+            return code_snippet.strip()
+            
+        except Exception as e:
+            return f"# Error extracting code: {str(e)}"
+
     
     def _generate_objectives(self, chain: List[str]) -> List[str]:
         """Generate learning objectives"""

@@ -13,6 +13,8 @@ import { Dashboard } from './components/pages/Dashboard';
 import { ProjectList } from './components/pages/ProjectList';
 import { LevelView } from './components/pages/LevelView';
 import { Leaderboard } from './components/pages/Leaderboard';
+import { CreateProject } from './components/pages/CreateProject';
+import ProjectDetail from './components/pages/ProjectDetail';
 import { MainLayout } from './components/templates/MainLayout';
 
 // Create Query Client
@@ -94,7 +96,8 @@ function AppRoutes() {
             >
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/projects" element={<ProjectList />} />
-                <Route path="/projects/:projectId" element={<ProjectList />} />
+                <Route path="/projects/create" element={<CreateProject />} />
+                <Route path="/projects/:projectId" element={<ProjectDetail />} />
                 <Route path="/levels/:levelId" element={<LevelView />} />
                 <Route path="/leaderboard" element={<Leaderboard />} />
                 <Route path="/achievements" element={<Dashboard />} />

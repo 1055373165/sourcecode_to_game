@@ -43,3 +43,33 @@ class UserProgress(Base):
     
     def __repr__(self):
         return f"<UserProgress {self.user_id} on {self.level_id}: {self.status.value}>"
+    
+    def increment_attempt(self):
+        """Increment the attempts counter"""
+        self.attempts += 1
+        if self.started_at is None:
+            self.started_at = datetime.utcnow()
+    
+    def update_score(self, earned_points: int, total_points: int, time_spent: int = 0):
+        """Update score and time tracking"""
+        # Update best score if this attempt is better
+        if earned_points > self.best_score:
+            self.best_score = earned_points
+        
+        # Update max score
+        self.max_score = total_points
+        
+        # Add to total time spent
+        self.time_spent += time_spent
+    
+    @property
+    def completed(self) -> bool:
+        """Check if the level is completed"""
+        return self.status == ProgressStatus.COMPLETED
+    
+    @property
+    def score(self) -> int:
+        """Return the best score as a percentage"""
+        if self.max_score == 0:
+            return 0
+        return int((self.best_score / self.max_score) * 100)
